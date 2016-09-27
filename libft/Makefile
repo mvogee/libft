@@ -27,6 +27,7 @@ SRC = ft_isalpha.c \
 		ft_memchr.c \
 		ft_strlcat.c \
 		ft_atoi.c \
+		ft_memccpy.c \
 
 OBJS = ft_isalpha.o \
 		ft_strlen.o \
@@ -55,6 +56,7 @@ OBJS = ft_isalpha.o \
 		ft_memchr.o \
 		ft_strlcat.o \
 		ft_atoi.o \
+		ft_memccpy.o \
 		
 CC = gcc
 
