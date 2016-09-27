@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvogee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/23 15:51:48 by mvogee            #+#    #+#             */
-/*   Updated: 2016/09/25 22:36:35 by mvogee           ###   ########.fr       */
+/*   Created: 2016/09/25 21:01:09 by mvogee            #+#    #+#             */
+/*   Updated: 2016/09/25 21:29:47 by mvogee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	len;
+	unsigned char *tmpdst;
+	unsigned char *tmpsrc;
 
-	len = ft_strlen((char*)s1);
-	if (ft_strlen((char*)s2) > len)
-		len = ft_strlen((char*)s2);
-	return (ft_memcmp(s1, s2, len));
+	tmpdst = (unsigned char*)dst;
+	tmpsrc = (unsigned char*)src;
+	if (len == 0 || dst == src)
+		return (dst);
+	while (len > 0)
+	{
+		*tmpdst = *tmpsrc;
+		tmpdst++;
+		tmpsrc++;
+		len--;
+	}
+	return (dst);
 }

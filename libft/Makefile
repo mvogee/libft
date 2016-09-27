@@ -20,6 +20,12 @@ SRC = ft_isalpha.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_memcmp.c \
+		ft_memset.c \
+		ft_bzero.c \
+		ft_memmove.c \
+		ft_memchr.c \
+		ft_strlcat.c \
+		ft_atoi.c \
 
 OBJS = ft_isalpha.o \
 		ft_strlen.o \
@@ -41,6 +47,12 @@ OBJS = ft_isalpha.o \
 		ft_strchr.o \
 		ft_strrchr.o \
 		ft_memcmp.o \
+		ft_memset.o \
+		ft_bzero.o \
+		ft_memmove.o \
+		ft_memchr.o \
+		ft_strlcat.o \
+		ft_atoi.o \
 		
 CC = gcc
 

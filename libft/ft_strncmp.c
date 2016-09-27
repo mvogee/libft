@@ -14,14 +14,5 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int count;
-
-	count = 0;
-	while ((s1[count] || s2[count]) && (size_t)count < n)
-	{
-		if (s1[count] - s2[count] != 0)
-			return (s1[count] - s2[count]);
-		count++;
-	}
-	return (0);
+	return (ft_memcmp(s1, s2, n));
 }
