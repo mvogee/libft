@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvogee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/28 12:06:40 by mvogee            #+#    #+#             */
-/*   Updated: 2016/09/28 12:16:16 by mvogee           ###   ########.fr       */
+/*   Created: 2016/09/28 14:10:02 by mvogee            #+#    #+#             */
+/*   Updated: 2016/09/28 14:20:54 by mvogee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	while (*s != '\0')
-		*s++ = '\0';
+	unsigned int	count;
+
+	count = 0;
+	while (s[count])
+	{
+		f(count, &s[count]);
+		count++;
+	}
 }
