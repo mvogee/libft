@@ -40,6 +40,7 @@ SRC = ft_isalpha.c \
 		ft_memdel.c \
 		ft_strnew.c \
 		ft_strdel.c \
+		ft_strclr.c \
 
 OBJS = ft_isalpha.o \
 		ft_strlen.o \
@@ -81,6 +82,7 @@ OBJS = ft_isalpha.o \
 		ft_memdel.o \
 		ft_strnew.o \
 		ft_strdel.o \
+		ft_strclr.o \
 		
 CC = gcc
 
