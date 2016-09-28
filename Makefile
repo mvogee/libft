@@ -47,6 +47,8 @@ SRC = ft_isalpha.c \
 		ft_strmapi.c \
 		ft_strequ.c \
 		ft_strnequ.c \
+		ft_strsub.c \
+		ft_strjoin.c \
 
 OBJS = ft_isalpha.o \
 		ft_strlen.o \
@@ -95,7 +97,9 @@ OBJS = ft_isalpha.o \
 		ft_strmapi.o \
 		ft_strequ.o \
 		ft_strnequ.o \
-		
+		ft_strsub.o \
+		ft_strjoin.o \
+
 CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra -c
