@@ -17,7 +17,7 @@ void	ft_putendl(char const *s)
 	int count;
 
 	count = 0;
-	while(s[count])
+	while (s[count])
 	{
 		write(1, &s[count], 1);
 		count++;

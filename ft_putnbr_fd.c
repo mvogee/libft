@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#inlcude "libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	tmp = (long)n;
 	if (tmp < 0)
 	{
-		ft_putchar_fd('-');
+		ft_putchar_fd('-', fd);
 		tmp *= -1;
 	}
 	if (tmp / 10)
