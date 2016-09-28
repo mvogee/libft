@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvogee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/28 14:37:42 by mvogee            #+#    #+#             */
-/*   Updated: 2016/09/28 14:54:32 by mvogee           ###   ########.fr       */
+/*   Created: 2016/09/28 15:26:39 by mvogee            #+#    #+#             */
+/*   Updated: 2016/09/28 15:29:20 by mvogee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	int				strlen;
-	unsigned int	count;
-	char			*retstr;
-
-	strlen = (int)ft_strlen((char*)s);
-	count = 0;
-	if (!(retstr = (char*)malloc(sizeof(char) * strlen + 1)))
-		return (NULL);
-	while (s[count])
-	{
-		retstr[count] = f(count, s[count]);
-		count++;
-	}
-	retstr[count] = '\0';
-	return (retstr);
+	if (ft_strncmp(s1, s2, n) == 0)
+		return (1);
+	return (0);
 }
