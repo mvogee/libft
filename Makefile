@@ -43,6 +43,8 @@ SRC = ft_isalpha.c \
 		ft_strclr.c \
 		ft_striter.c \
 		ft_striteri.c \
+		ft_strmap.c \
+		ft_strmapi.c \
 
 OBJS = ft_isalpha.o \
 		ft_strlen.o \
@@ -87,6 +89,8 @@ OBJS = ft_isalpha.o \
 		ft_strclr.o \
 		ft_striter.o \
 		ft_striteri.o \
+		ft_strmap.o \
+		ft_strmapi.o \
 		
 CC = gcc
 
