@@ -39,6 +39,7 @@ SRC = ft_isalpha.c \
 		ft_memalloc.c \
 		ft_memdel.c \
 		ft_strnew.c \
+		ft_strdel.c \
 
 OBJS = ft_isalpha.o \
 		ft_strlen.o \
@@ -79,6 +80,7 @@ OBJS = ft_isalpha.o \
 		ft_memalloc.o \
 		ft_memdel.o \
 		ft_strnew.o \
+		ft_strdel.o \
 		
 CC = gcc
 
