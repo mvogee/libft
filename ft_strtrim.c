@@ -22,8 +22,10 @@ char	*ft_strtrim(char const *s)
 	count = 0;
 	i = 0;
 	len = (int)ft_strlen((char*)s) - 1;
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ',')
+	while ((s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ',') && s[i])
 		i++;
+	if (s[i] == '\0')
+		return ("");
 	while (s[len] == ' ' || s[len] == '\t' || s[len] == '\n' || s[len] == ',')
 		len--;
 	len = len - i + 1;
