@@ -19,12 +19,21 @@ static void		add_chars(char *retstr, long n, int len)
 		retstr[0] = '-';
 		n *= -1;
 		len--;
+		while (len > 0 && retstr[len] != '-')
+		{
+			retstr[len] = n % 10 + '0';
+			n = n / 10;
+			len--;
+		}
 	}
-	while (len > 0)
+	else
 	{
-		retstr[len] = n % 10 + '0';
-		n = n / 10;
-		len--;
+		while (len > 0)
+		{
+			len--;
+			retstr[len] = n % 10 + '0';
+			n = n / 10;
+		}
 	}
 }
 
@@ -32,12 +41,11 @@ char			*ft_itoa(int n)
 {
 	int		len;
 	char	*retstr;
-	char	*ptr;
 	int		ntmp;
 
 	len = 1;
 	ntmp = n;
-	if (n < 0)
+	if (ntmp < 0)
 		len++;
 	while (ntmp / 10)
 	{
@@ -46,8 +54,8 @@ char			*ft_itoa(int n)
 	}
 	if (!(retstr = (char*)malloc(sizeof(char) * len + 1)))
 		return (NULL);
-	ptr = retstr;
-	add_chars(retstr, (long)n, len);
+	else
+		add_chars(retstr, (long)n, len);
 	retstr[len] = '\0';
 	return (retstr);
 }
