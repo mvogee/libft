@@ -19,6 +19,8 @@ static int	count_words(char const *s, char c, int flag, int wrdstrt)
 
 	word_count = 0;
 	index = 0;
+	if (!*s)
+		return (0);
 	if (s[0] != c)
 	{
 		word_count++;
@@ -80,5 +82,6 @@ char		**ft_strsplit(char const *s, char c)
 			return (NULL);
 		count++;
 	}
+	ptr_array[count] = 0;
 	return (ptr_array);
 }

@@ -51,6 +51,7 @@ SRC = ft_isalpha.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_strsplit.c \
+		ft_itoa.c \
 
 OBJS = $(SRC:.c=.o)
 

@@ -1,42 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvogee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/28 16:17:10 by mvogee            #+#    #+#             */
-/*   Updated: 2016/09/28 16:47:14 by mvogee           ###   ########.fr       */
+/*   Created: 2016/09/29 17:25:59 by mvogee            #+#    #+#             */
+/*   Updated: 2016/09/29 23:29:24 by mvogee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+static void		add_chars(char *retstr, long n, int len)
+{
+	if (n < 0)
+	{
+		retstr[0] = '-';
+		n *= -1;
+		len--;
+	}
+	while (len > 0)
+	{
+		retstr[len] = n % 10 + '0';
+		n = n / 10;
+		len--;
+	}
+}
+
+char			*ft_itoa(int n)
 {
 	int		len;
-	int		count;
-	int		index;
 	char	*retstr;
+	char	*ptr;
+	int		ntmp;
 
-	count = 0;
-	index = 0;
-	len = (int)(ft_strlen((char*)s1) + ft_strlen((char*)s2));
+	len = 1;
+	ntmp = n;
+	if (n < 0)
+		len++;
+	while (ntmp / 10)
+	{
+		len++;
+		ntmp /= 10;
+	}
 	if (!(retstr = (char*)malloc(sizeof(char) * len + 1)))
 		return (NULL);
-	while (s1[index])
-	{
-		retstr[count] = s1[index];
-		count++;
-		index++;
-	}
-	index = 0;
-	while (s2[index])
-	{
-		retstr[count] = s2[index];
-		count++;
-		index++;
-	}
-	retstr[count] = '\0';
+	ptr = retstr;
+	add_chars(retstr, (long)n, len);
+	retstr[len] = '\0';
 	return (retstr);
 }
