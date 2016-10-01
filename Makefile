@@ -63,7 +63,7 @@ OBJS = $(SRC:.c=.o)
 
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -c
+CFLAGS = -Wall -Wextra -Werror -c
 
 all: $(NAME)
 
