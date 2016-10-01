@@ -6,13 +6,13 @@
 /*   By: mvogee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 12:23:19 by mvogee            #+#    #+#             */
-/*   Updated: 2016/10/01 12:45:29 by mvogee           ###   ########.fr       */
+/*   Updated: 2016/10/01 15:40:28 by mvogee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	lstdelone(t_list **alst, void (*del)(void*, size_t))
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
 	if (alst && *alst)
 	{

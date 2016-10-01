@@ -20,7 +20,7 @@ t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	{
 		newlist = f(lst);
 		newlist->next = ft_lstmap(lst->next, f);
-		return (newlist)
+		return (newlist);
 	}
 	return (NULL);
 }
