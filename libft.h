@@ -80,5 +80,6 @@ char			*ft_itoa(int n);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			lstdelone(t_list **alst, void (*del)(void*, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstadd(t_list **alst, t_list *new);
 
 #endif

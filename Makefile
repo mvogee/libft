@@ -55,6 +55,7 @@ SRC = ft_isalpha.c \
 		ft_lstnew.c \
 		ft_lstdelone.c \
 		ft_lstdel.c \
+		ft_lstadd.c \
 
 OBJS = $(SRC:.c=.o)
 
