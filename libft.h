@@ -19,9 +19,9 @@
 
 typedef struct	s_list
 {
-void	*content;
-size_t	content_size;
-struct	s_list *next;
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
 }				t_list;
 
 int				ft_isdigit(int c);
@@ -78,5 +78,7 @@ char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
 char			*ft_itoa(int n);
 t_list			*ft_lstnew(void const *content, size_t content_size);
+void			lstdelone(t_list **alst, void (*del)(void*, size_t));
+void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 
 #endif
