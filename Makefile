@@ -58,6 +58,11 @@ SRC = ft_isalpha.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		ft_isupper.c \
+		ft_islower.c \
+		ft_printbits.c \
+		ft_swapchar.c \
+		ft_lstaddlast.c \
 
 OBJS = $(SRC:.c=.o)
 
