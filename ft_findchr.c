@@ -6,9 +6,11 @@
 /*   By: mvogee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/30 18:54:13 by mvogee            #+#    #+#             */
-/*   Updated: 2016/10/30 18:54:14 by mvogee           ###   ########.fr       */
+/*   Updated: 2016/10/30 19:47:18 by mvogee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_findchr(const char *str, char c)
 {
