@@ -6,7 +6,7 @@
 /*   By: mvogee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 17:04:50 by mvogee            #+#    #+#             */
-/*   Updated: 2016/10/06 20:51:24 by mvogee           ###   ########.fr       */
+/*   Updated: 2016/10/30 19:39:22 by mvogee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ int				ft_islower(char c);
 void			ft_printbits(unsigned char octet);
 void			ft_swapchar(char *ptr, char *ptr2);
 void			ft_lstaddlast(t_list *alst, t_list *new);
+int				ft_findchr(const char *str, char c);
 
 #endif
