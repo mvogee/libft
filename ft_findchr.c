@@ -28,5 +28,5 @@ int		ft_findchr(const char *str, char c)
 	if (c == '\0')
 		return (count);
 	else
-		return (0);
+		return (-1);
 }
