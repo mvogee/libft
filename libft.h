@@ -91,5 +91,6 @@ void			ft_swapchar(char *ptr, char *ptr2);
 void			ft_lstaddlast(t_list *alst, t_list *new);
 int				ft_findchr(const char *str, char c);
 int				get_next_line(const int fd, char **line);
+char			*ft_itoa_base(long value, int base);
 
 #endif
