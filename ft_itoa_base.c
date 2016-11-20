@@ -32,25 +32,25 @@ char		*ft_itoa_base(long value, int base)
 	char	*ret;
 	char	*nums;
 
-	nums = "0123456789ABCDEF";
+	nums = "0123456789abcdef";
 	if (value < 0 && base != 10)
 		value *= -1;
 	len = get_len(value, base);
 	if (value < 0 && base == 10)
 		len += 1;
 	ret = (char*)malloc(sizeof(char) * len + 1);
+	if (!ret)
+		return (NULL);
 	if (value < 0 && base == 10)
 	{
 		ret[0] = '-';
 		value *= -1;
 	}
 	ret[len] = '\0';
-	len--;
-	while (len >= 0 && value != 0)
+	while (len-- >= 0 && value != 0)
 	{
 		ret[len] = *(nums + (value % base));
 		value /= base;
-		len--;
 	}
 	return (ret);
 }
