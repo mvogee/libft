@@ -66,6 +66,7 @@ SRC = ft_isalpha.c \
 		ft_findchr.c \
 		get_next_line.c \
 		ft_itoa_base.c \
+		ft_toupperstr.c \
 
 OBJS = $(SRC:.c=.o)
 
