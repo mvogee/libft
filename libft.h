@@ -93,5 +93,6 @@ int				ft_findchr(const char *str, char c);
 int				get_next_line(const int fd, char **line);
 char			*ft_itoa_base(long value, int base);
 char			*ft_toupperstr(char *str);
+char			*ft_lltoa(long long int n);
 
 #endif
