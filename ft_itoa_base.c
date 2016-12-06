@@ -11,11 +11,10 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
-static long	get_len(long value, int base)
+static int	get_len(long long int value, int base)
 {
-	long	len;
+	int	len;
 
 	len = 0;
 	while (value / base)
@@ -26,7 +25,7 @@ static long	get_len(long value, int base)
 	return (len + 1);
 }
 
-char		*ft_itoa_base(long value, int base)
+char		*ft_itoa_base(long long int value, int base)
 {
 	int		len;
 	char	*ret;
