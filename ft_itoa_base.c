@@ -17,6 +17,10 @@ static int	get_len(long long int value, int base)
 	int	len;
 
 	len = 0;
+	if (value < 0 && base == 10)
+		len += 1;
+	if (value < 0)
+		value *= -1;
 	while (value / base)
 	{
 		value = value / base;
@@ -35,16 +39,15 @@ char		*ft_itoa_base(long long int value, int base)
 	if (value < 0 && base != 10)
 		value *= -1;
 	len = get_len(value, base);
-	if (value < 0 && base == 10)
-		len += 1;
-	ret = (char*)malloc(sizeof(char) * len + 1);
-	if (!ret)
+	if (!(ret = (char*)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	if (value < 0 && base == 10)
 	{
 		ret[0] = '-';
 		value *= -1;
 	}
+	if (value == 0)
+		ret[0] = '0';
 	ret[len] = '\0';
 	while (len-- >= 0 && value != 0)
 	{
