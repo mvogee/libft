@@ -14,20 +14,22 @@
 
 static void		add_chars(char *retstr, long long int n, int len)
 {
+	unsigned long long int n2;
 	if (n < 0)
 	{
 		retstr[0] = '-';
-		n *= -1;
+		n2 = (unsigned long long)(n * -1);
 		len--;
 		while (len > 0 && retstr[len] != '-')
 		{
-			retstr[len] = n % 10 + '0';
-			n = n / 10;
+			retstr[len] = n2 % 10 + '0';
+			n2 = n2 / 10;
 			len--;
 		}
 	}
 	else
 	{
+		n2 = (unsigned long long)n;
 		while (len > 0)
 		{
 			len--;
