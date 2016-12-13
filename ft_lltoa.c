@@ -15,6 +15,7 @@
 static void		add_chars(char *retstr, long long int n, int len)
 {
 	unsigned long long int n2;
+
 	if (n < 0)
 	{
 		retstr[0] = '-';
