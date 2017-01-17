@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-char	*extend_line(char *s1, char *s2, int bytes_read, int len)
+char		*extend_line(char *s1, char *s2, int bytes_read, int len)
 {
 	char			hold[len];
 	int				count;
@@ -41,7 +41,7 @@ char	*extend_line(char *s1, char *s2, int bytes_read, int len)
 	return (s1);
 }
 
-char	*read_entire_fd(int fd)
+char		*read_entire_fd(int fd)
 {
 	char			tmp[BUFF_SIZE];
 	int				bytes_read;
@@ -93,7 +93,7 @@ t_gnllst	*new_fd(int fd, char *str, int job, t_gnllst *freeme)
 	return (node);
 }
 
-int		do_gnl(char *str, char **line)
+int			do_gnl(char *str, char **line)
 {
 	int		ret;
 	int		new_line;
@@ -110,7 +110,7 @@ int		do_gnl(char *str, char **line)
 	return (ret);
 }
 
-int		get_next_line(const int fd, char **line)
+int			get_next_line(const int fd, char **line)
 {
 	static t_gnllst	*fd_lst;
 	t_gnllst		*head;
