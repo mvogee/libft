@@ -61,7 +61,6 @@ SRC = ft_isalpha.c \
 		ft_isupper.c \
 		ft_islower.c \
 		ft_printbits.c \
-		ft_swapchar.c \
 		ft_lstaddlast.c \
 		ft_findchr.c \
 		get_next_line.c \

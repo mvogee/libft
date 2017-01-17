@@ -6,7 +6,7 @@
 /*   By: mvogee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 17:04:50 by mvogee            #+#    #+#             */
-/*   Updated: 2016/11/05 18:17:19 by mvogee           ###   ########.fr       */
+/*   Updated: 2017/01/16 18:19:56 by mvogee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,6 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int				ft_isupper(char c);
 int				ft_islower(char c);
 void			ft_printbits(unsigned char octet);
-void			ft_swapchar(char *ptr, char *ptr2);
 void			ft_lstaddlast(t_list *alst, t_list *new);
 int				ft_findchr(const char *str, char c);
 int				get_next_line(const int fd, char **line);
