@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	get_len(unsigned long int value, int base)
+static int	get_len(uintmax_t value, int base)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ static int	get_len(unsigned long int value, int base)
 	return (len + 1);
 }
 
-char		*ft_itoa_base_unsigned(unsigned long int value, int base)
+char		*ft_itoa_base_unsigned(uintmax_t value, int base)
 {
 	int		len;
 	char	*ret;
