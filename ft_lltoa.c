@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-static void		add_chars(char *retstr, long long int n, int len)
+static void		add_chars(char *retstr, intmax_t n, int len)
 {
-	unsigned long long int n2;
+	uintmax_t n2;
 
 	if (n < 0)
 	{
 		retstr[0] = '-';
-		n2 = (unsigned long long)(n * -1);
+		n2 = (uintmax_t)(n * -1);
 		len--;
 		while (len > 0 && retstr[len] != '-')
 		{
@@ -30,7 +30,7 @@ static void		add_chars(char *retstr, long long int n, int len)
 	}
 	else
 	{
-		n2 = (unsigned long long)n;
+		n2 = (uintmax_t)n;
 		while (len > 0)
 		{
 			len--;
@@ -40,7 +40,7 @@ static void		add_chars(char *retstr, long long int n, int len)
 	}
 }
 
-char			*ft_lltoa(long long int n)
+char			*ft_lltoa(intmax_t n)
 {
 	int					len;
 	char				*retstr;
