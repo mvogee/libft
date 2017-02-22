@@ -19,7 +19,7 @@ static	int	signer(char s)
 	return (1);
 }
 
-int			ft_atol(const char *str)
+long		ft_atol(const char *str)
 {
 	long	retval;
 	int		count;
